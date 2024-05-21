@@ -52,6 +52,7 @@
 	<body>
 		<header>
 			<h1>CUBE</h1>
+			<!-- à modifier selon les pages prévues -->
 			<nav>
 				<a href="#">Panier</a>
 				<a href="#">Commandes</a>
@@ -77,8 +78,10 @@
 				</thead>
 
 				<tbody id="tableBodyArticles">
+					<!-- le template sert de modèle pour créer les lignes recevants les donnéesdes articles -->
 					<template id="templateRow">
 						<tr>
+							<!-- on attribue une classe pour cibler plus facilement chaque élément depuis le js -->
 							<td class="id"></td>
 							<td class="title"></td>
 							<td class="author"></td>
@@ -88,7 +91,8 @@
 							<td class="region"></td>
 							<td class="grape"></td>
 							<td>
-								<button id="commander">Commander</button>
+								<!-- pour commander un article  -->
+								<button>Commander</button>
 							</td>
 						</tr>
 					</template>
