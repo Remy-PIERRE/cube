@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CUBE - Affichage des articles</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+			header,
+			footer {
+				background-color: #333;
+				color: white;
+				text-align: center;
+				padding: 1em 0;
+			}
+			nav {
+				margin: 0.5em 0;
+			}
+			nav a {
+				color: white;
+				margin: 0 1em;
+				text-decoration: none;
+			}
+			main {
+				padding: 2em;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 1em;
+			}
+			table,
+			th,
+			td {
+				border: 1px solid #ddd;
+			}
+			th,
+			td {
+				padding: 0.5em;
+				text-align: left;
+			}
+			th {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>CUBE</h1>
+			<nav>
+				<a href="#">Panier</a>
+				<a href="#">Commandes</a>
+				<a href="#">Connexion</a>
+			</nav>
+		</header>
+
+		<main>
+			<h2>Mes articles</h2>
+
+			<table id="articlesTable">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Titre</th>
+						<th>Auteur</th>
+						<th>Date</th>
+						<th>Description</th>
+						<th>Prix</th>
+						<th>Région</th>
+						<th>Grape</th>
+					</tr>
+				</thead>
+
+				<tbody id="tableBodyArticles">
+					<template id="templateRow">
+						<tr>
+							<td class="id"></td>
+							<td class="title"></td>
+							<td class="author"></td>
+							<td class="date"></td>
+							<td class="description"></td>
+							<td class="price"></td>
+							<td class="region"></td>
+							<td class="grape"></td>
+							<td>
+								<button id="commander">Commander</button>
+							</td>
+						</tr>
+					</template>
+				</tbody>
+			</table>
+		</main>
+
+		<footer>
+			<nav>
+				<a href="#">Confidentialité</a>
+				<a href="#">Conditions d'utilisation</a>
+			</nav>
+
+			<p>&copy; 2024 CUBE. Tous droits réservés.</p>
+		</footer>
+
+		<script>
+			// quand la page est chargée //
+			window.addEventListener("load", initApp);
+
+			// fonction d'initialisation de ma page //
+			async function initApp() {
+				// url pour récupérer ma liste d'articles //
+				const url = "./assets/json/articles.json";
+
+				// requête asynchrone => try / catch obligatoire //
+				try {
+					// récupération des données depuis l'api //
+					const response = await fetch(url);
+					const data = await response.json();
+					console.table(data);
+
+					// affichage des données pour chaque article //
+					data.forEach((article) => {
+						displayArticle(article);
+						handleCommander(article);
+					});
+				} catch (error) {
+					// si erreur, on affiche le message //
+					console.log(error.message);
+				}
+			}
+
+			function displayArticle(article) {
+				// on récupère le template de base pour chaque ligne dans la table //
+				const template = document
+					.querySelector("#templateRow")
+					.content.cloneNode(true);
+
+				// on insère pour chaque ligne un attribut décrivant l'id de l'article
+				// bien plus pratique pour les manipulations et fonctionnalitées à venir //
+				template.querySelector("button").dataset.id = article.id;
+
+				// on insère les données pour chaque cellule de la ligne //
+				template.querySelector(".id").innerHTML = article.id;
+				template.querySelector(".title").innerHTML = article.title;
+				template.querySelector(".author").innerHTML = article.author;
+				template.querySelector(".date").innerHTML = article.date;
+				template.querySelector(".description").innerHTML = article.description;
+				template.querySelector(".price").innerHTML = article.price;
+				template.querySelector(".region").innerHTML = article.region;
+				template.querySelector(".grape").innerHTML = article.grape;
+
+				// on ajoute la ligne dans le DOM //
+				const tableBody = document.querySelector("#tableBodyArticles");
+				tableBody.appendChild(template);
+			}
+
+			function handleCommander(article) {
+				// on récupère le bouton correspondant à l'article //
+				const button = document.querySelector(`[data-id="${article.id}"]`);
+
+				// on affiche un message au click => ajouter dans le panier //
+				button.addEventListener("click", () => {
+					console.log(`Vous avez commandé l'article id : ${article.id}`);
+				});
+			}
+		</script>
+	</body>
+</html>

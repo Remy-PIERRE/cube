@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "title": "Château Margaux",
+        "author": "Paul Pontallier",
+        "date": "2022-05-15",
+        "description": "Un vin rouge d'exception de Bordeaux, connu pour sa finesse et son élégance.",
+        "price": 350.00,
+        "region": "Bordeaux",
+        "grape": "Cabernet Sauvignon"
+    },
+    {
+        "id": 2,
+        "title": "Domaine de la Romanée-Conti",
+        "author": "Aubert de Villaine",
+        "date": "2021-11-20",
+        "description": "L'un des vins les plus prestigieux au monde, issu de Bourgogne.",
+        "price": 1800.00,
+        "region": "Bourgogne",
+        "grape": "Pinot Noir"
+    },
+    {
+        "id": 3,
+        "title": "Pétrus",
+        "author": "Olivier Berrouet",
+        "date": "2020-10-12",
+        "description": "Un vin mythique de Pomerol, apprécié pour sa richesse et sa profondeur.",
+        "price": 2500.00,
+        "region": "Pomerol",
+        "grape": "Merlot"
+    },
+    {
+        "id": 4,
+        "title": "Château d'Yquem",
+        "author": "Pierre Lurton",
+        "date": "2019-09-08",
+        "description": "Un vin liquoreux de Sauternes, réputé pour sa complexité et son équilibre.",
+        "price": 400.00,
+        "region": "Sauternes",
+        "grape": "Sémillon"
+    },
+    {
+        "id": 5,
+        "title": "Opus One",
+        "author": "Michael Silacci",
+        "date": "2018-07-14",
+        "description": "Un grand vin californien, fruit d'une collaboration entre Mondavi et Rothschild.",
+        "price": 350.00,
+        "region": "Napa Valley",
+        "grape": "Cabernet Sauvignon"
+    },
+    {
+        "id": 6,
+        "title": "Château Cheval Blanc",
+        "author": "Pierre Lurton",
+        "date": "2017-05-25",
+        "description": "Un vin emblématique de Saint-Émilion, célèbre pour sa complexité et son potentiel de garde.",
+        "price": 600.00,
+        "region": "Saint-Émilion",
+        "grape": "Cabernet Franc"
+    },
+    {
+        "id": 7,
+        "title": "Vega Sicilia Unico",
+        "author": "Pablo Álvarez",
+        "date": "2016-03-17",
+        "description": "Un vin espagnol de Ribera del Duero, reconnu pour sa grande qualité et sa longévité.",
+        "price": 350.00,
+        "region": "Ribera del Duero",
+        "grape": "Tempranillo"
+    },
+    {
+        "id": 8,
+        "title": "Penfolds Grange",
+        "author": "Peter Gago",
+        "date": "2015-02-05",
+        "description": "Le vin australien iconique, connu pour sa richesse et son caractère.",
+        "price": 700.00,
+        "region": "South Australia",
+        "grape": "Shiraz"
+    },
+    {
+        "id": 9,
+        "title": "Sassicaia",
+        "author": "Sebastiano Rosa",
+        "date": "2014-01-22",
+        "description": "Un Super Toscan célèbre pour son élégance et sa structure.",
+        "price": 300.00,
+        "region": "Toscane",
+        "grape": "Cabernet Sauvignon"
+    },
+    {
+        "id": 10,
+        "title": "Château Mouton Rothschild",
+        "author": "Philippe Dhalluin",
+        "date": "2013-11-10",
+        "description": "Un grand cru classé de Pauillac, apprécié pour sa puissance et sa complexité.",
+        "price": 500.00,
+        "region": "Pauillac",
+        "grape": "Cabernet Sauvignon"
+    }
+]
