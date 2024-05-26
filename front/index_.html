@@ -39,6 +39,7 @@
 				</div>
 			</section>
 
+			<!-- produits -->
 			<section>
 				<h2>Produits</h2>
 
@@ -114,11 +115,18 @@
 
 		// vérifier si utilisateur connecté //
 		function getUser() {
-			if (!window.localStorage.getItem("user")) {
-				return null;
-			} else {
-				return JSON.parse(window.localStorage.getItem("user"));
-			}
+			const user = {
+				name: "Rémy",
+				age: 37,
+			};
+
+			window.localStorage.setItem("user", JSON.stringify(user));
+
+			// if (!window.localStorage.getItem("user")) {
+			// 	return null;
+			// } else {
+			// 	return JSON.parse(window.localStorage.getItem("user"));
+			// }
 		}
 
 		// si non connecté //
@@ -206,7 +214,7 @@
 			}
 		}
 
-		// @clik sur un filtre //
+		// @click sur un filtre //
 		function handleFilterClick(event) {
 			const filterType = event.currentTarget.value;
 

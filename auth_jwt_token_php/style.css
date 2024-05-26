@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+}
+
+.login--container,
+.sendToken--container {
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+.login--container h2,
+.sendToken--container h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.form--container {
+	display: flex;
+	flex-direction: column;
+}
+
+.form--section {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.form--section label {
+	padding-left: 4px;
+	font-size: 1rem;
+	margin-bottom: 8px;
+}
+
+.form--section input {
+	width: 240px;
+	height: 40px;
+	border: 1px outset #333;
+	border-radius: 4px;
+	padding: 0 12px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.form--container button,
+.sendToken--container button {
+	width: fit-content;
+	height: 40px;
+	padding: 0 12px;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-weight: bold;
+}
